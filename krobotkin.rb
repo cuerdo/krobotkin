@@ -15,7 +15,7 @@
 #   You should have received a copy of the GNU Affero General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>
 require 'telegram/bot'
-
+require 'pry'
 
 token = '235421751:AAHVIMlFcoXnJkdf8WYGxTrdOz7FWskQRHw'
 
@@ -29,6 +29,7 @@ Telegram::Bot::Client.run(token) do |bot|
         Telegram::Bot::Types::ReplyKeyboardMarkup
         .new(keyboard: [%w(Lo_Grondona Toda_la_llavi), %w(Tu_vieja Inglaterra)], one_time_keyboard: true)
       bot.api.send_message(chat_id: message.chat.id, text: question, reply_markup: answers)
+binding.pry
     when '/stop'
       bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name}")
     end

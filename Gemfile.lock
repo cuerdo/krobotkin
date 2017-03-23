@@ -24,6 +24,7 @@ GEM
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     builder (3.2.3)
+    coderay (1.1.1)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     concurrent-ruby (1.0.5)
@@ -38,11 +39,16 @@ GEM
     ice_nine (0.11.2)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
+    method_source (0.8.2)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multipart-post (2.0.0)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -51,6 +57,7 @@ GEM
       nokogiri (~> 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    slop (3.6.0)
     telegram-bot (0.11.1)
       actionpack (>= 4.0, < 5.1)
       activesupport (>= 4.0, < 5.1)
@@ -71,6 +78,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  pry
   telegram-bot
   telegram-bot-ruby
 
